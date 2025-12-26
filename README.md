@@ -2,7 +2,7 @@
 
 ## Project Background
 
-A web application that benchmarks 10 different sorting algorithms against the same dataset of 100 unique random numbers (range: 1-1000). Built to demonstrate the performance characteristics of different sorting approaches with real-time visualization.
+A web application that benchmarks 10 different sorting algorithms against the same dataset of 10,000 unique random numbers (range: 1-1,000,000). Built to demonstrate the performance characteristics of different sorting approaches with real-time visualization.
 
 ## Architecture
 
@@ -13,9 +13,12 @@ A web application that benchmarks 10 different sorting algorithms against the sa
 
 ### Backend
 - **Rust** with **Actix-web** framework
+- Modular architecture with each sorting algorithm in its own file
+- **Actix-files** for static file serving
 - High-performance sorting implementations
 - RESTful API with CORS support for local development
-- Nanosecond-precision timing using `std::time::Instant`
+- Microsecond-precision timing using `std::time::Instant`
+- Comprehensive test suite in `sorts/mod.rs`
 
 ### Sorting Algorithms Implemented
 1. Bubble Sort - O(n²) comparison-based
@@ -29,21 +32,39 @@ A web application that benchmarks 10 different sorting algorithms against the sa
 9. Bucket Sort - O(n+k) distribution-based
 10. Shell Sort - O(n log n) gap-based insertion
 
+### Modular Architecture Benefits
+- **Isolation**: Each algorithm in its own file for easy maintenance and testing
+- **Scalability**: New algorithms can be added without modifying existing code
+- **Testability**: Centralized test suite in `mod.rs` validates all algorithms
+- **Readability**: Clear file structure makes it easy to locate specific implementations
+- **Reusability**: Public exports allow algorithms to be used independently
+
 ## Project Structure
 
 ```
-sorting-benchmark/
+rust_sorting/
 ├── README.md
 ├── frontend/
 │   ├── index.html          # Main UI
 │   ├── style.css           # Styling
 │   └── app.js              # Client-side logic
 ├── backend/
-│   ├── Cargo.toml          # Rust dependencies
+│   ├── Cargo.toml          # Rust dependencies & build config
 │   └── src/
-│       ├── main.rs         # Web server & API
-│       └── sorts.rs        # All sorting algorithms
-└── reference/
+│       ├── main.rs         # Web server, API endpoints & benchmarking
+│       └── sorts/
+│           ├── mod.rs              # Module exports & test suite
+│           ├── bubble_sort.rs      # Bubble sort implementation
+│           ├── selection_sort.rs   # Selection sort implementation
+│           ├── insertion_sort.rs   # Insertion sort implementation
+│           ├── merge_sort.rs       # Merge sort implementation
+│           ├── quick_sort.rs       # Quick sort implementation
+│           ├── heap_sort.rs        # Heap sort implementation
+│           ├── tim_sort.rs         # Tim sort implementation
+│           ├── radix_sort.rs       # Radix sort implementation
+│           ├── bucket_sort.rs      # Bucket sort implementation
+│           └── shell_sort.rs       # Shell sort implementation
+└── references/
     └── algorithm-notes.md  # Technical documentation
 ```
 
@@ -63,6 +84,15 @@ cargo run --release
 ```
 
 The server will start on `http://localhost:8080`
+
+### Running Tests
+
+```bash
+cd backend
+cargo test
+```
+
+This runs the comprehensive test suite in `sorts/mod.rs` that validates all 10 sorting algorithms.
 
 ### Frontend Access
 
@@ -87,7 +117,7 @@ python3 -m http.server 3000
 ## API Endpoints
 
 ### POST `/sort`
-Generates 100 unique random numbers and sorts them using all 10 algorithms.
+Generates 10,000 unique random numbers (range: 1-1,000,000) and sorts them using all 10 algorithms.
 
 **Response:**
 ```json
@@ -113,11 +143,14 @@ Generates 100 unique random numbers and sorts them using all 10 algorithms.
 ## Development
 
 Built with focus on:
-- Clean separation of concerns
+- Clean separation of concerns with modular architecture
+- Each sorting algorithm isolated in its own module for maintainability
 - Type safety with Rust
-- Minimal dependencies
+- Minimal dependencies (actix-web, actix-cors, actix-files, serde, rand)
 - Cross-platform compatibility
+- Comprehensive test coverage in `sorts/mod.rs`
 - Educational value demonstrating algorithm complexity
+- Optimized release builds with LTO and codegen-units=1
 
 ---
 
