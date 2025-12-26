@@ -1,0 +1,12 @@
+/Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/deps/mime_guess-b4771a5515d51b95.d: /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/lib.rs /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/impl_bin_search.rs /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/mime_types.rs /Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/build/mime_guess-e6ad99e69292b0bd/out/mime_types_generated.rs
+
+/Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/deps/libmime_guess-b4771a5515d51b95.rlib: /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/lib.rs /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/impl_bin_search.rs /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/mime_types.rs /Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/build/mime_guess-e6ad99e69292b0bd/out/mime_types_generated.rs
+
+/Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/deps/libmime_guess-b4771a5515d51b95.rmeta: /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/lib.rs /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/impl_bin_search.rs /Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/mime_types.rs /Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/build/mime_guess-e6ad99e69292b0bd/out/mime_types_generated.rs
+
+/Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/lib.rs:
+/Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/impl_bin_search.rs:
+/Users/rogerwoolie/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime_guess-2.0.5/src/mime_types.rs:
+/Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/build/mime_guess-e6ad99e69292b0bd/out/mime_types_generated.rs:
+
+# env-dep:MIME_TYPES_GENERATED_PATH=/Users/rogerwoolie/Documents/Project_CScience/rust_sorting/backend/target/release/build/mime_guess-e6ad99e69292b0bd/out/mime_types_generated.rs
